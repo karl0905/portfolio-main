@@ -1,0 +1,39 @@
+/* Loading.css */
+
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--blaa);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  z-index: 999;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* .loader > div {
+  Style the loading spinner itself here
+} */
+
+/* Optionally, you can add transition effects for the spinner */
+.loader > div {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Make the loading container fully visible when it has the 'loading' class */
+.loading .loading-container {
+  opacity: 0;
+  pointer-events: none;
+}

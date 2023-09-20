@@ -1,0 +1,32 @@
+.landing__container {
+    position: relative;
+    top: 20%;
+    left: 10%;
+    width: 20rem;
+}
+
+.landing__img {
+    height: 25rem;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.landing__container-text {
+    margin-top: 2rem;
+}
+
+.fade-bund {
+    position: relative;
+}
+
+.fade-bund:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 25%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--blaa));
+    pointer-events: none;
+}

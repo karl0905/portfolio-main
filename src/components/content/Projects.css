@@ -1,0 +1,13 @@
+.section__para {
+    position: relative;
+    left: 5%;
+    width: 20rem;
+}
+
+.projects__container-flex {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}

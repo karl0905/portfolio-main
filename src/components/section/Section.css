@@ -1,0 +1,25 @@
+#one {
+    background-color: var(--blaa);
+}
+
+#two {
+    background-color: var(--lysBlaa);
+}
+
+#three {
+    background-color: var(--blaa);
+}
+
+#four {
+    background-color: var(--lysBlaa);
+}
+
+#one, #two, #three, #four {
+    height: 100vh;
+}
+
+@media (min-width: 768px) {
+    #one, #two, #three, #four {
+        height: 100vh;
+    }
+}
