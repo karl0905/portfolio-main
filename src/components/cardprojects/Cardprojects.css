@@ -1,21 +1,55 @@
+/* Cardprojects.css */
 .cardprojects {
     margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 18rem;
 }
 
 .cardprojects__img {
     width: 90%;
     height: auto;
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 .cardprojects__para {
     margin-bottom: 1rem;
 }
 
-@media (min-width: 768px) {
+.cardprojects__img-container {
+    min-width: 18rem;
+    width: auto;
+    max-width: 20rem;
+    height: auto;
+    overflow: hidden;
+}
 
-    .cardprojects__img:hover {
-        object-fit: cover;
-        opacity: 0.6;
+@media (min-width: 768px) {
+    .cardprojects__img-container {
+        min-width: 30rem;
+        width: 32rem;
+        min-height: 16rem;
+        max-height: 10.5rem;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .cardprojects__img-container:hover {
+        transform: scale(1.01);
+    }
+
+    .cardprojects {
+        height: auto;
+    }
+
+    .cardprojects__img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .cardprojects p {
+        height: 4rem;
     }
 }

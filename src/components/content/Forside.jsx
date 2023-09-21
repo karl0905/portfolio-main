@@ -1,8 +1,7 @@
 import PostItem from "../postitem/PostItem";
 import React, { useState, useEffect } from "react";
 import "./Forside.css";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import EmailIcon from "@mui/icons-material/Email";
+import Some from "./Some";
 
 export default function Forside() {
   const [posts, setPosts] = useState([]);
@@ -28,16 +27,11 @@ export default function Forside() {
             alt="et billede af Karl Løvendahl"
           />
         </div>
+        <div className="landing__some-text">
         {posts.map((post) => (
-          <PostItem key={post.id} post={post} />
+          <PostItem key={post.id} post={post} /> //displayer data fra rest api
         ))}
-        <div className="some__container">
-          <a href="https://www.linkedin.com/in/karl-gustav-løvendahl-35ab2324a/" className="some__container-flex">
-            <LinkedInIcon className="some" /> / LinkedIn
-          </a>
-          <a href="mailto: kalle44@live.dk" className="some__container-flex">
-            <EmailIcon className="some" /> / kalle44@live.dk
-          </a>
+        <Some />
         </div>
       </section>
     </>

@@ -1,26 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import './reset.css';
-import Loading from './components/loading/Loading';
-import Menu from './components/menu/Menu';
-import Section from './components/section/Section';
-import Forside from './components/content/Forside';
-import Skills from './components/content/Skills';
-import Projects from './components/content/Projects';
+import React, { useState, useEffect, lazy, Suspense } from "react";
+import "./reset.css";
+import Loading from "./components/loading/Loading";
+import Menu from "./components/menu/Menu";
+import Section from "./components/section/Section";
+import ScrollToTop from "react-scroll-to-top";
+import Skills from "./components/content/Skills";
+import Projects from "./components/content/Projects";
+import Contact from "./components/content/Contact";
+
+// Bruger lazy to at importere forside komponentet
+const Forside = lazy(() => import("./components/content/Forside"));
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Start the loading timer
+    // En timer til loading componentet
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 100);
+    }, 1500);
 
-    // Clear the timer when the component unmounts
     return () => {
       clearTimeout(timer);
     };
-  }, []); // Empty dependency array to ensure this effect runs only once
+  }, []);
 
   return (
     <div className="App">
@@ -30,15 +33,20 @@ function App() {
         <>
           <Menu />
           <Section number="one">
-            <Forside />
+            <Suspense fallback={<Loading />}> {/* Loader forside komponentet mens der vises en loading skærm */}
+              <Forside />                     {/* Nødvendigt fordi forside komponentet indeholder en REST API, der skal loades */}
+            </Suspense>                       {/* inden siden vises */}
           </Section>
+          <ScrollToTop className="ScrollToTop" />
           <Section number="two">
-            <Skills />  
+            <Skills />
           </Section>
           <Section number="three">
-            <Projects/>
+            <Projects />
           </Section>
-          <Section number="four" />
+          <Section number="four">
+            <Contact />
+          </Section>
         </>
       )}
     </div>

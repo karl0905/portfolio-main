@@ -1,6 +1,6 @@
 .landing__container {
     position: relative;
-    top: 20%;
+    padding-top: 10rem;
     left: 10%;
     width: 20rem;
 }
@@ -27,6 +27,73 @@
     left: 0;
     right: 0;
     height: 25%;
+    width: 70vw;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--blaa));
     pointer-events: none;
+}
+
+.test {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+@media (min-width: 768px) {
+    .landing__container {
+        position: relative;
+        padding-top: 15rem;
+        left: 10%;
+        width: 80%;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .landing__img {
+        height: 60vh;
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+
+    .landing__container-text {
+        margin-top: 2rem;
+        margin-right: 3rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .landing__some-text {
+        margin-left: 2rem;
+        margin-top: 6rem;
+    }
+
+    .fade-bund {
+        position: relative;
+        max-width: 60%;
+    }
+
+    .fade-bund:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 25%;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--blaa));
+        pointer-events: none;
+        width: auto;
+    }
+
+    .landing__para p {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        width: 95%;
+    }
+
+
+    .test {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
 }

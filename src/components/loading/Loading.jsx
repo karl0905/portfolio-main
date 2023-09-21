@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ScaleLoader } from 'react-spinners';
+import { ScaleLoader } from 'react-spinners';   //scale loader fra npm.js
 import './Loading.css';
 
 export default function Loading() {
@@ -7,9 +7,8 @@ export default function Loading() {
   const [isFadeOut, setIsFadeOut] = useState(false);
 
   useEffect(() => {
-    // Simulate loading completion after 2 seconds (replace with your actual loading logic)
     const timeout = setTimeout(() => {
-      setIsFadeOut(true); // Trigger the fade-out animation
+      setIsFadeOut(true);
     }, 2000);
 
     return () => {
@@ -17,12 +16,11 @@ export default function Loading() {
     };
   }, []);
 
-  // Remove the loading container from the DOM after the fade-out animation
   useEffect(() => {
     if (isFadeOut) {
       const fadeOutTimer = setTimeout(() => {
         setIsLoading(false);
-      }, 900); // Adjust the timing to match the CSS transition duration (0.9s)
+      }, 900);
       
       return () => {
         clearTimeout(fadeOutTimer);

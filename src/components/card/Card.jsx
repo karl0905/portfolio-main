@@ -5,7 +5,7 @@ import 'aos/dist/aos.css'
 
 export default function Card(props) {
 
-    Aos.init();
+    Aos.init(); //Animation on scroll fra npm.js
 
     return(
         <div className="card" data-aos="fade-up" data-aos-once="true" data-aos-delay={props.delay}>

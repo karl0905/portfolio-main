@@ -39,21 +39,23 @@
   left: -1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
 
   .menu {
-    font-family: "Open Sans", sans-serif;
     position: fixed;
-    right: 3rem;
+    left: auto;
     top: 55%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     z-index: 999;
+    width: 20%;
+    margin: 0;
+    margin-right: 6rem;
   }
   
   .link {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--hvid);
     text-decoration: none;
     margin-bottom: 1rem;
@@ -73,14 +75,14 @@
   .link__selected {
     color: var(--hvid);
     position: relative;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 500;
   }
   
   .link__selected::before {
     content: "//";
     position: absolute;
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: var(--hvid);
     bottom: 0;
     left: -2.5rem;

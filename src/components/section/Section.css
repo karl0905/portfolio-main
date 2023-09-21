@@ -14,12 +14,22 @@
     background-color: var(--lysBlaa);
 }
 
-#one, #two, #three, #four {
-    height: 100vh;
+#one, #two, #three {
+    min-height: 100%;
+    max-height: 100%;
+    padding-bottom: 3rem;
+}
+
+#four {
+    min-height: 20vh;
+    height: 28rem;
 }
 
 @media (min-width: 768px) {
-    #one, #two, #three, #four {
-        height: 100vh;
+    #one, #two, #three {
+        height: 100%;
+        min-height: 100vh;
     }
+
+
 }

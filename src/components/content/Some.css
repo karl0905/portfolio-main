@@ -1,0 +1,44 @@
+.some__container-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+    margin-top: 1rem;
+  }
+  
+  .some__container-flex:first-child {
+    margin-right: 2rem;
+  }
+  
+  .some__container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .some {
+    color: white;
+    scale: 1.3;
+    margin-right: 0.5rem;
+  }
+
+@media (min-width: 768px) {
+    .some {
+        scale: 1.6;
+    }
+
+    .some__container-flex p {
+        font-size: 1.4rem;
+        margin-left: 0.4rem;
+    }
+
+    .some__container-flex:hover {
+        transform: scale(1.1);
+    }
+
+    .some__container-flex:first-child, .some__container-flex:nth-child(2) {
+      margin-right: 2rem;
+    }
+}

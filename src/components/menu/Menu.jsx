@@ -8,18 +8,18 @@ export default function Menu() {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
 
-      // Define the positions of each section based on their indices
+      // Definer positionerne fra hver section
       const sectionPositions = [0, 1, 2, 3].map((index) => {
         return {
           id: `link_${index + 1}`,
-          position: index * window.innerHeight, // Each section has 100vh
+          position: index * window.innerHeight, // hver section har 100vh undtaget den sidste
         };
       });
 
-      // Define a threshold value to trigger the change midway through the sections
-      const threshold = 0.4; 
+      // et threshold der bestemmer hvornår menuen skiftes
+      const threshold = 0.5; 
 
-      // Find the active link based on scroll position and threshold
+      // finder active menu position efter threshhold og hvor langt der er scrollet
       let activeId = 'link_1';
 
       for (const section of sectionPositions) {
@@ -41,7 +41,7 @@ export default function Menu() {
   }, []);
 
   return (
-    <div className="menu fade-in">
+    <div className="menu fade-in babas">
       <a
         id="link_1"
         className={`link ${activeLinkId === 'link_1' ? 'link__selected' : ''}`}
