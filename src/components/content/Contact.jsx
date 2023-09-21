@@ -5,7 +5,7 @@ export default function Contact() {
     <>
       <h2 className="section__title margin-bottom babas">Contact</h2>
       <p className="section__para inter">
-        Skriv til min på LinkedIn eller send mig en mail. <br /> <br /> Jeg ser
+        Skriv til mig på LinkedIn eller send mig en mail. <br /> <br /> Jeg ser
         frem til at høre fra dig!
       </p>
       <div className="flex">
